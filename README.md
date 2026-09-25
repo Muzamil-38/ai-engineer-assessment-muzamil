@@ -6,7 +6,7 @@ A FastAPI chatbot for Ronaldo and superhero questions, with sources included. It
 
 Start Docker. Copy `.env.example` to `.env` if needed, then set `LLM_API_KEY` and `SUPERHERO_API_KEY`.
 
-A temporary OpenRouter review key is provided separately with a spending limit and 30-day expiry.
+A temporary OpenRouter review key is provided separately. You can also use any OpenAI-compatible provider by setting LLM_BASE_URL, LLM_API_KEY, and LLM_MODEL in .env. See .env.example for the configuration.
 
 ```sh
 docker compose up --build -d
