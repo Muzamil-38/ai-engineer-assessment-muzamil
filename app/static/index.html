@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174f3c">
+  <title>CR7 & Heroes</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <main>
+      <div class="intro">
+        <p class="description">Explore Cristiano Ronaldo’s career, get to know your favourite superhero, or ask about both. Every answer comes with its sources.</p>
+      </div>
+
+      <section class="workspace" aria-label="Ask a question">
+        <form id="ask-form">
+          <label for="question">What would you like to know?</label>
+          <textarea id="question" name="question" rows="3" maxlength="2000" required placeholder="Which clubs has Ronaldo played for?"></textarea>
+          <div class="form-footer">
+            <span id="count">0 / 2,000</span>
+            <button id="submit" type="submit">Ask a question <span aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+        <div class="suggestions">
+          <span class="try-label">TRY A QUESTION</span>
+          <div class="chips">
+            <button type="button" data-question="How many Ballon d'Or awards has Ronaldo won?">CR7’s Ballon d’Or wins</button>
+            <button type="button" data-question="What are Superman's powerstats?">Superman’s powerstats</button>
+            <button type="button" data-question="Where was Ronaldo born, and what is Batman's full name?">A little of both</button>
+          </div>
+        </div>
+      </section>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <section id="result" class="result" aria-labelledby="answer-title" hidden>
+        <div class="answer-heading"><span class="eyebrow">THE ANSWER</span></div>
+        <h2 id="answer-title"></h2>
+        <p id="answer"></p>
+        <div id="warnings"></div>
+        <div id="sources"></div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
